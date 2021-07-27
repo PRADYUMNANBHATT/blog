@@ -1,0 +1,28 @@
+
+{% extends "portfolio/theme.html" %}
+{% block body %}
+{% load static %}
+<div class=" container text-center">
+<div class="col">
+<img src="{% static 'portfolio/handsome.jpg' %}" alt="My image"  width="100%" >
+<h5> Coming soon!</h5>
+</div>
+<hr>
+<div class="row">
+{% for project in project %}
+<div class="col-4 text-center">
+<div class="front">
+<img src="{{ project.image.url}}" width="100%" alt="new project"/>
+</div>
+<h4>{{ project.title }}</h4>
+<p>{{ project.discription }}</p>
+{% if project.url%}
+<a href="{{ project.url }}">link</a>
+{% endif %}
+</div>
+
+{% endfor%}
+<hr>
+</div>
+</div>
+{% endblock %}

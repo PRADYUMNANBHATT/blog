@@ -1,0 +1,20 @@
+{% extends "portfolio/theme.html" %}
+{% block body %}
+
+<div class="card mb-3" >
+    <div class="row g-0">
+     
+      <div class="col">
+        <div class="card-body">
+          
+          <h4 class="card-title text-center">{{blog.title}}</h4>
+          <p class="card-text text-center"><small class="text-muted"> Last updated {{ blog.date_published|date:'d M y' |upper}} </small></p>
+          <div class=" container col-10"><img src="{{ blog.image.url}}" width="100%"height="100%" alt="new project"/></div>
+          <p class="card-text">{{blog.description|safe}}</p>
+          
+        </div>
+      </div>
+    </div>
+</div>
+
+{% endblock %}

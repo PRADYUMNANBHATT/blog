@@ -1,0 +1,8 @@
+body {
+    font-family: 'Muli', serif;
+    font-size: 28px;
+  }
+.front img {
+    width:100%;
+    height: 250px;
+}
